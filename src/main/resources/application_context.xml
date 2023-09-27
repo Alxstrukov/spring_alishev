@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:property-placeholder location="classpath:music_player.properties"/>
+
+    &lt;!&ndash;    Внутри каждого тега bean можно вписать аттрибут scope, который отвечает за создание объекта бина. то есть,
+            при обращении к контексту для получения объекта при помощи бина (context.getBean();)
+            мы можем получать каждый раз новый объект либо ссылку на уже существующий.
+            Добиться этого можно при установке значений аттрибуту scope (singleton или prototype)
+                - "singleton" - реализуем так сказать паттерн синглтон, всегда один объект
+                - "prototype" - будем получать всегда новый объект&ndash;&gt;
+
+    <bean id="musicBean"
+          class="ru.home.spring_course.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getInstance">
+    </bean>
+
+
+    <bean id="musicPlayer"
+          class="ru.home.spring_course.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+
+        &lt;!&ndash;Внедрение через сеттер&ndash;&gt;
+
+        &lt;!&ndash;        <property name="name" value="AIMP"/>&ndash;&gt;
+        &lt;!&ndash;        <property name="volume" value="55"/>&ndash;&gt;
+
+        &lt;!&ndash;Внедрение через проперти. Для этого выше написан тег <context:property-placeholder.....&ndash;&gt;
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>-->
+
+<!--    всё что выше закомментировано, работает внедрение зависимостей через сеттеры, конструктор и проперти-->
+<!--    А ниже при помощи аннотации @Component-->
+    <context:component-scan base-package="ru.home.spring_course"/>
+
+</beans>
