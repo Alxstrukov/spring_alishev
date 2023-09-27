@@ -53,12 +53,12 @@ public class MusicPlayer {
     public MusicPlayer() {
     }
 
-    //    public void playMusic(StyleMusic styleMusic) {
-//        switch (styleMusic){
-//            case CLASSICAL -> System.out.println("Playing: " + classicalMusic.getSong());
-//            case ROCK -> System.out.println("Playing: " + rockMusic.getSong());
-//        }
-//    }
+/*    public void playMusic(StyleMusic styleMusic) {
+        switch (styleMusic) {
+            case CLASSICAL -> System.out.println("Playing: " + classicalMusic.getSong());
+            case ROCK -> System.out.println("Playing: " + rockMusic.getSong());
+        }
+    }*/
     public void playMusic() {
         Random random = new Random();
         System.out.println("Playing: " + musicList.get(random.nextInt(musicList.size())).getSong()
