@@ -4,6 +4,7 @@ import lombok.Setter;
 import org.springframework.context.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Configuration
@@ -48,11 +49,8 @@ public class SpringConfig {
 
     @Bean
     public List<Music> getMusics() {
-        List<Music> musicList = new ArrayList<>();
-        musicList.add(classicalMusic());
-        musicList.add(jazzMusic());
-        musicList.add(rockMusic());
-        return musicList;
+        // Этот лист неизменяемый (immutable)
+        return Arrays.asList(classicalMusic(), rockMusic(), jazzMusic());
     }
 
 }

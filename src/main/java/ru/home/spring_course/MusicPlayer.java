@@ -3,6 +3,7 @@ package ru.home.spring_course;
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
@@ -16,7 +17,9 @@ public class MusicPlayer {
 //    private Music classicalMusic;
     private List<Music> musicList;
 
+    @Value("${musicPlayer.name}")
     private String name;
+    @Value("${musicPlayer.volume}")
     private int volume;
 
     //@Autowired
@@ -58,6 +61,7 @@ public class MusicPlayer {
 //    }
     public void playMusic() {
         Random random = new Random();
-        System.out.println(musicList.get(random.nextInt(musicList.size())).getSong());
+        System.out.println("Playing: " + musicList.get(random.nextInt(musicList.size())).getSong()
+                + " with volume " + this.volume);
     }
 }
