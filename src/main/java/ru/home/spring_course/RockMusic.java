@@ -7,7 +7,11 @@ import org.springframework.stereotype.Component;
 public class RockMusic implements Music {
     private RockPlayList playList;
 
-    @Autowired
+    public RockMusic(RockPlayList playList) {
+        this.playList = playList;
+    }
+
+    //@Autowired
     public void setPlayList(RockPlayList playList) {
         this.playList = playList;
     }

@@ -22,7 +22,7 @@ public class TestSpring {
 //        System.out.println(computer);
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic(StyleMusic.ROCK);
+        //musicPlayer.playMusic(StyleMusic.ROCK);
         context.close();
     }
 }

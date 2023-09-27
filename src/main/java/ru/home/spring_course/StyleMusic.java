@@ -1,5 +1,5 @@
 package ru.home.spring_course;
 
 public enum StyleMusic {
-    CLASSICAL, ROCK
+    CLASSICAL, ROCK, JAZZ
 }

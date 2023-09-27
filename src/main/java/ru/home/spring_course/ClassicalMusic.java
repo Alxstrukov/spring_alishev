@@ -8,10 +8,14 @@ import org.springframework.stereotype.Component;
 @ToString
 public class ClassicalMusic implements Music {
     private ClassicalPlayList playList;
-    private ClassicalMusic() {
+    public ClassicalMusic() {
     }
 
-    @Autowired
+    public ClassicalMusic(ClassicalPlayList playList) {
+        this.playList = playList;
+    }
+
+    //@Autowired
     public void setPlayList(ClassicalPlayList playList) {
         this.playList = playList;
     }

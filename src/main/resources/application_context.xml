@@ -40,6 +40,7 @@
 
 <!--    всё что выше закомментировано, работает внедрение зависимостей через сеттеры, конструктор и проперти-->
 <!--    А ниже при помощи аннотации @Component-->
-    <context:component-scan base-package="ru.home.spring_course"/>
+<!--    <context:component-scan base-package="ru.home.spring_course"/>-->
+
 
 </beans>
